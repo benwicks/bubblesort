@@ -15,4 +15,17 @@ internal class BubbleSorterTest {
             bubbleSortedList
         )
     }
+
+    @Test
+    fun `Given a list with two items, when they are swapped, then the two items are reversed`() {
+        val twoItems = mutableListOf(0, 1)
+        val reversedTwoItems = twoItems.reversed()
+
+        BubbleSorter.swapItems(twoItems, 0, 1)
+
+        assertEquals(
+            reversedTwoItems,
+            twoItems
+        )
+    }
 }
